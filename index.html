@@ -1,53 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Home</title>
+  <title>Home</title>
+  <style>
+    /* Full-page GIF background */
+    body {
+      margin: 0;
+      height: 100vh;
+      background: url("gif.gif") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+    }
 
-<style>
-body {
-  margin: 0;
-  height: 100vh;
-  background: url("https://tenor.com/view/maxwell-cat-spinning-spin-meme-gif-27388554") no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, sans-serif;
-}
+    /* Container for buttons */
+    .container {
+      text-align: center;
+      backdrop-filter: blur(5px);
+      padding: 30px;
+      border-radius: 15px;
+    }
 
-.container {
-  text-align: center;
-  backdrop-filter: blur(5px);
-}
+    /* Flashy gaming-style buttons */
+    button {
+      display: block;
+      width: 220px;
+      margin: 20px auto;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00);
+      background-size: 600% 600%;
+      animation: gradientMove 4s ease infinite, floatBtn 2s ease-in-out infinite;
+      box-shadow: 0 0 15px #00ffff, 0 0 30px #ff00ff inset;
+      transition: all 0.3s ease;
+    }
 
-button {
-  display: block;
-  width: 200px;
-  margin: 15px auto;
-  padding: 15px;
-  font-size: 18px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  background-color: rgba(0,0,0,0.7);
-  color: white;
-  transition: 0.2s;
-}
+    button:hover {
+      box-shadow: 0 0 25px #00ffff, 0 0 50px #ff00ff inset;
+      transform: scale(1.15);
+    }
 
-button:hover {
-  background-color: rgba(255,255,255,0.2);
-}
-</style>
+    /* Gradient animation */
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Floating button animation */
+    @keyframes floatBtn {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+  </style>
 </head>
-
 <body>
-
-<div class="container">
-  <button onclick="location.href='1.19test.html'">1.19test</button>
-  <button onclick="location.href='gn.html'">Gn</button>
-  <button onclick="location.href='eagler.html'">Eagler</button>
-  <button onclick="location.href='more.html'">More</button>
-</div>
-
+  <div class="container">
+    <button onclick="location.href='1.19test.html'">1.19test</button>
+    <button onclick="location.href='gn.html'">Gn</button>
+    <button onclick="location.href='eagler.html'">Eagler</button>
+    <button onclick="location.href='more.html'">More</button>
+  </div>
 </body>
 </html>
